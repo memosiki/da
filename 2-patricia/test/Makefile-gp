@@ -1,0 +1,20 @@
+CC = g++
+FLAGS = -std=c++11 -pg -no-pie -pedantic -Wall -Werror -Wno-sign-compare -Wno-long-long -O2
+SOURCES = main.o TPatriciaTrie.o
+EXECUTABLE = patricia
+all: build
+
+gprof:main.o $(SOURCES)
+	$(CC) $(FLAGS) -o start_gp $(SOURCES)
+
+build: main.o $(SOURCES)
+	$(CC) $(FLAGS) -o $(EXECUTABLE) $(SOURCES)
+
+main.o: main.cpp TPatriciaTrie.h
+	$(CC) $(FLAGS) -c main.cpp
+
+TPatriciaTrie.o: TPatriciaTrie.cpp TPatriciaTrie.h
+	$(CC) $(FLAGS) -c TPatriciaTrie.cpp
+
+clean:
+	rm -f $(SOURCES) $(EXECUTABLE)

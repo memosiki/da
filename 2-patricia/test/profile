@@ -1,0 +1,307 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  us/call  us/call  name    
+ 28.70      2.75     2.75     6248   440.55   474.19  TPatriciaTrie::DestructRecursive(TPatriciaTrieNode*)
+ 23.07      4.96     2.21     6231   355.01   355.01  TPatriciaTrie::WriteRecursive(std::basic_ofstream<char, std::char_traits<char> >*, TPatriciaTrieNode*)
+ 22.54      7.13     2.16     6231   346.98   346.98  TPatriciaTrie::Index(TPatriciaTrieNode*, int*)
+ 17.80      8.83     1.71     6248   273.14   327.56  TPatriciaTrie::ReadRecursive(std::basic_ifstream<char, std::char_traits<char> >*, TPatriciaTrieNode**, int*)
+  3.55      9.17     0.34 19968889     0.02     0.02  TPatriciaTrieNode::TPatriciaTrieNode(char*, unsigned long long, int, TPatriciaTrieNode**)
+  1.46      9.31     0.14 19962677     0.01     0.01  TPatriciaTrieNode::~TPatriciaTrieNode()
+  0.73      9.38     0.07 19962677     0.00     0.01  TPatriciaTrieNode::~TPatriciaTrieNode()
+  0.52      9.43     0.05    37520     1.33     1.33  Lowercase(char*)
+  0.31      9.46     0.03     6232     4.82   706.69  TPatriciaTrie::Write(std::basic_ofstream<char, std::char_traits<char> >*)
+  0.26      9.49     0.03     6248     4.00   331.56  TPatriciaTrie::Read(std::basic_ifstream<char, std::char_traits<char> >*)
+  0.21      9.51     0.02   803734     0.02     0.02  TPatriciaTrie::BitGet(char*, int)
+  0.21      9.53     0.02    18848     1.06     1.28  TPatriciaTrie::FirstDifferentBit(char*, char*)
+  0.21      9.55     0.02    18712     1.07     1.07  std::operator|(std::_Ios_Openmode, std::_Ios_Openmode)
+  0.21      9.57     0.02     6236     3.21     3.21  TPatriciaTrieNode::GetValue()
+  0.10      9.58     0.01    12591     0.79     1.32  TPatriciaTrie::Find(char*)
+  0.10      9.59     0.01    12520     0.80     1.32  TPatriciaTrie::Delete(char*)
+  0.10      9.60     0.01    12409     0.81     2.99  TPatriciaTrie::Insert(char*, unsigned long long)
+  0.00      9.60     0.00    75038     0.00     0.00  TPatriciaTrie::BitLen(char*)
+  0.00      9.60     0.00    37519     0.00     0.22  TPatriciaTrie::KeyCompare(char*, char*)
+  0.00      9.60     0.00    18823     0.00     0.00  TPatriciaTrie::IsEmpty()
+  0.00      9.60     0.00     6249     0.00     0.02  TPatriciaTrie::TPatriciaTrie()
+  0.00      9.60     0.00     6248     0.00   474.19  TPatriciaTrie::~TPatriciaTrie()
+  0.00      9.60     0.00     6248     0.00   474.19  TPatriciaTrie::~TPatriciaTrie()
+  0.00      9.60     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z9LowercasePc
+  0.00      9.60     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN17TPatriciaTrieNodeC2EPcyiPPS_
+  0.00      9.60     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      9.60     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.10% of 9.60 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.00    9.60                 main [1]
+                0.03    4.37    6232/6232        TPatriciaTrie::Write(std::basic_ofstream<char, std::char_traits<char> >*) [2]
+                0.00    2.96    6248/6248        TPatriciaTrie::~TPatriciaTrie() [4]
+                0.03    2.05    6248/6248        TPatriciaTrie::Read(std::basic_ifstream<char, std::char_traits<char> >*) [8]
+                0.05    0.00   37520/37520       Lowercase(char*) [13]
+                0.01    0.03   12409/12409       TPatriciaTrie::Insert(char*, unsigned long long) [14]
+                0.02    0.00   18712/18712       std::operator|(std::_Ios_Openmode, std::_Ios_Openmode) [17]
+                0.02    0.00    6236/6236        TPatriciaTrieNode::GetValue() [18]
+                0.01    0.01   12591/12591       TPatriciaTrie::Find(char*) [19]
+                0.01    0.01   12520/12520       TPatriciaTrie::Delete(char*) [20]
+                0.00    0.00    6249/6249        TPatriciaTrie::TPatriciaTrie() [22]
+-----------------------------------------------
+                0.03    4.37    6232/6232        main [1]
+[2]     45.9    0.03    4.37    6232         TPatriciaTrie::Write(std::basic_ofstream<char, std::char_traits<char> >*) [2]
+                2.21    0.00    6231/6231        TPatriciaTrie::WriteRecursive(std::basic_ofstream<char, std::char_traits<char> >*, TPatriciaTrieNode*) [6]
+                2.16    0.00    6231/6231        TPatriciaTrie::Index(TPatriciaTrieNode*, int*) [7]
+                0.00    0.00    6232/18823       TPatriciaTrie::IsEmpty() [30]
+-----------------------------------------------
+                             19956429             TPatriciaTrie::DestructRecursive(TPatriciaTrieNode*) [3]
+                2.75    0.21    6248/6248        TPatriciaTrie::~TPatriciaTrie() [5]
+[3]     30.9    2.75    0.21    6248+19956429 TPatriciaTrie::DestructRecursive(TPatriciaTrieNode*) [3]
+                0.07    0.14 19962677/19962677     TPatriciaTrieNode::~TPatriciaTrieNode() [11]
+                             19956429             TPatriciaTrie::DestructRecursive(TPatriciaTrieNode*) [3]
+-----------------------------------------------
+                0.00    2.96    6248/6248        main [1]
+[4]     30.9    0.00    2.96    6248         TPatriciaTrie::~TPatriciaTrie() [4]
+                0.00    2.96    6248/6248        TPatriciaTrie::~TPatriciaTrie() [5]
+-----------------------------------------------
+                0.00    2.96    6248/6248        TPatriciaTrie::~TPatriciaTrie() [4]
+[5]     30.9    0.00    2.96    6248         TPatriciaTrie::~TPatriciaTrie() [5]
+                2.75    0.21    6248/6248        TPatriciaTrie::DestructRecursive(TPatriciaTrieNode*) [3]
+-----------------------------------------------
+                             19688717             TPatriciaTrie::WriteRecursive(std::basic_ofstream<char, std::char_traits<char> >*, TPatriciaTrieNode*) [6]
+                2.21    0.00    6231/6231        TPatriciaTrie::Write(std::basic_ofstream<char, std::char_traits<char> >*) [2]
+[6]     23.0    2.21    0.00    6231+19688717 TPatriciaTrie::WriteRecursive(std::basic_ofstream<char, std::char_traits<char> >*, TPatriciaTrieNode*) [6]
+                             19688717             TPatriciaTrie::WriteRecursive(std::basic_ofstream<char, std::char_traits<char> >*, TPatriciaTrieNode*) [6]
+-----------------------------------------------
+                             19694948             TPatriciaTrie::Index(TPatriciaTrieNode*, int*) [7]
+                2.16    0.00    6231/6231        TPatriciaTrie::Write(std::basic_ofstream<char, std::char_traits<char> >*) [2]
+[7]     22.5    2.16    0.00    6231+19694948 TPatriciaTrie::Index(TPatriciaTrieNode*, int*) [7]
+                             19694948             TPatriciaTrie::Index(TPatriciaTrieNode*, int*) [7]
+-----------------------------------------------
+                0.03    2.05    6248/6248        main [1]
+[8]     21.6    0.03    2.05    6248         TPatriciaTrie::Read(std::basic_ifstream<char, std::char_traits<char> >*) [8]
+                1.71    0.34    6248/6248        TPatriciaTrie::ReadRecursive(std::basic_ifstream<char, std::char_traits<char> >*, TPatriciaTrieNode**, int*) [9]
+-----------------------------------------------
+                             39900462             TPatriciaTrie::ReadRecursive(std::basic_ifstream<char, std::char_traits<char> >*, TPatriciaTrieNode**, int*) [9]
+                1.71    0.34    6248/6248        TPatriciaTrie::Read(std::basic_ifstream<char, std::char_traits<char> >*) [8]
+[9]     21.3    1.71    0.34    6248+39900462 TPatriciaTrie::ReadRecursive(std::basic_ifstream<char, std::char_traits<char> >*, TPatriciaTrieNode**, int*) [9]
+                0.34    0.00 19950231/19968889     TPatriciaTrieNode::TPatriciaTrieNode(char*, unsigned long long, int, TPatriciaTrieNode**) [10]
+                             39900462             TPatriciaTrie::ReadRecursive(std::basic_ifstream<char, std::char_traits<char> >*, TPatriciaTrieNode**, int*) [9]
+-----------------------------------------------
+                0.00    0.00    6249/19968889     TPatriciaTrie::TPatriciaTrie() [22]
+                0.00    0.00   12409/19968889     TPatriciaTrie::Insert(char*, unsigned long long) [14]
+                0.34    0.00 19950231/19968889     TPatriciaTrie::ReadRecursive(std::basic_ifstream<char, std::char_traits<char> >*, TPatriciaTrieNode**, int*) [9]
+[10]     3.5    0.34    0.00 19968889         TPatriciaTrieNode::TPatriciaTrieNode(char*, unsigned long long, int, TPatriciaTrieNode**) [10]
+-----------------------------------------------
+                0.07    0.14 19962677/19962677     TPatriciaTrie::DestructRecursive(TPatriciaTrieNode*) [3]
+[11]     2.2    0.07    0.14 19962677         TPatriciaTrieNode::~TPatriciaTrieNode() [11]
+                0.14    0.00 19962677/19962677     TPatriciaTrieNode::~TPatriciaTrieNode() [12]
+-----------------------------------------------
+                0.14    0.00 19962677/19962677     TPatriciaTrieNode::~TPatriciaTrieNode() [11]
+[12]     1.5    0.14    0.00 19962677         TPatriciaTrieNode::~TPatriciaTrieNode() [12]
+-----------------------------------------------
+                0.05    0.00   37520/37520       main [1]
+[13]     0.5    0.05    0.00   37520         Lowercase(char*) [13]
+-----------------------------------------------
+                0.01    0.03   12409/12409       main [1]
+[14]     0.4    0.01    0.03   12409         TPatriciaTrie::Insert(char*, unsigned long long) [14]
+                0.01    0.00   12409/18848       TPatriciaTrie::FirstDifferentBit(char*, char*) [15]
+                0.01    0.00  332747/803734      TPatriciaTrie::BitGet(char*, int) [16]
+                0.00    0.00   12409/37519       TPatriciaTrie::KeyCompare(char*, char*) [21]
+                0.00    0.00   12409/19968889     TPatriciaTrieNode::TPatriciaTrieNode(char*, unsigned long long, int, TPatriciaTrieNode**) [10]
+-----------------------------------------------
+                0.01    0.00    6439/18848       TPatriciaTrie::KeyCompare(char*, char*) [21]
+                0.01    0.00   12409/18848       TPatriciaTrie::Insert(char*, unsigned long long) [14]
+[15]     0.3    0.02    0.00   18848         TPatriciaTrie::FirstDifferentBit(char*, char*) [15]
+                0.00    0.00  163554/803734      TPatriciaTrie::BitGet(char*, int) [16]
+-----------------------------------------------
+                0.00    0.00  151155/803734      TPatriciaTrie::Delete(char*) [20]
+                0.00    0.00  156278/803734      TPatriciaTrie::Find(char*) [19]
+                0.00    0.00  163554/803734      TPatriciaTrie::FirstDifferentBit(char*, char*) [15]
+                0.01    0.00  332747/803734      TPatriciaTrie::Insert(char*, unsigned long long) [14]
+[16]     0.2    0.02    0.00  803734         TPatriciaTrie::BitGet(char*, int) [16]
+-----------------------------------------------
+                0.02    0.00   18712/18712       main [1]
+[17]     0.2    0.02    0.00   18712         std::operator|(std::_Ios_Openmode, std::_Ios_Openmode) [17]
+-----------------------------------------------
+                0.02    0.00    6236/6236        main [1]
+[18]     0.2    0.02    0.00    6236         TPatriciaTrieNode::GetValue() [18]
+-----------------------------------------------
+                0.01    0.01   12591/12591       main [1]
+[19]     0.2    0.01    0.01   12591         TPatriciaTrie::Find(char*) [19]
+                0.00    0.00  156278/803734      TPatriciaTrie::BitGet(char*, int) [16]
+                0.00    0.00   12590/37519       TPatriciaTrie::KeyCompare(char*, char*) [21]
+                0.00    0.00   12591/18823       TPatriciaTrie::IsEmpty() [30]
+-----------------------------------------------
+                0.01    0.01   12520/12520       main [1]
+[20]     0.2    0.01    0.01   12520         TPatriciaTrie::Delete(char*) [20]
+                0.00    0.00  151155/803734      TPatriciaTrie::BitGet(char*, int) [16]
+                0.00    0.00   12520/37519       TPatriciaTrie::KeyCompare(char*, char*) [21]
+-----------------------------------------------
+                0.00    0.00   12409/37519       TPatriciaTrie::Insert(char*, unsigned long long) [14]
+                0.00    0.00   12520/37519       TPatriciaTrie::Delete(char*) [20]
+                0.00    0.00   12590/37519       TPatriciaTrie::Find(char*) [19]
+[21]     0.1    0.00    0.01   37519         TPatriciaTrie::KeyCompare(char*, char*) [21]
+                0.01    0.00    6439/18848       TPatriciaTrie::FirstDifferentBit(char*, char*) [15]
+                0.00    0.00   75038/75038       TPatriciaTrie::BitLen(char*) [29]
+-----------------------------------------------
+                0.00    0.00    6249/6249        main [1]
+[22]     0.0    0.00    0.00    6249         TPatriciaTrie::TPatriciaTrie() [22]
+                0.00    0.00    6249/19968889     TPatriciaTrieNode::TPatriciaTrieNode(char*, unsigned long long, int, TPatriciaTrieNode**) [10]
+-----------------------------------------------
+                0.00    0.00   75038/75038       TPatriciaTrie::KeyCompare(char*, char*) [21]
+[29]     0.0    0.00    0.00   75038         TPatriciaTrie::BitLen(char*) [29]
+-----------------------------------------------
+                0.00    0.00    6232/18823       TPatriciaTrie::Write(std::basic_ofstream<char, std::char_traits<char> >*) [2]
+                0.00    0.00   12591/18823       TPatriciaTrie::Find(char*) [19]
+[30]     0.0    0.00    0.00   18823         TPatriciaTrie::IsEmpty() [30]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [44]
+[31]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z9LowercasePc [31]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [33]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [44]
+[32]     0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN17TPatriciaTrieNodeC2EPcyiPPS_ [32]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [34]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z9LowercasePc [31]
+[33]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [33]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN17TPatriciaTrieNodeC2EPcyiPPS_ [32]
+[34]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [34]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [31] _GLOBAL__sub_I__Z9LowercasePc [15] TPatriciaTrie::FirstDifferentBit(char*, char*) [30] TPatriciaTrie::IsEmpty()
+  [32] _GLOBAL__sub_I__ZN17TPatriciaTrieNodeC2EPcyiPPS_ [19] TPatriciaTrie::Find(char*) [22] TPatriciaTrie::TPatriciaTrie()
+  [33] __static_initialization_and_destruction_0(int, int) [8] TPatriciaTrie::Read(std::basic_ifstream<char, std::char_traits<char> >*) [4] TPatriciaTrie::~TPatriciaTrie()
+  [34] __static_initialization_and_destruction_0(int, int) [7] TPatriciaTrie::Index(TPatriciaTrieNode*, int*) [5] TPatriciaTrie::~TPatriciaTrie()
+  [13] Lowercase(char*)        [2] TPatriciaTrie::Write(std::basic_ofstream<char, std::char_traits<char> >*) [18] TPatriciaTrieNode::GetValue()
+  [21] TPatriciaTrie::KeyCompare(char*, char*) [16] TPatriciaTrie::BitGet(char*, int) [10] TPatriciaTrieNode::TPatriciaTrieNode(char*, unsigned long long, int, TPatriciaTrieNode**)
+   [9] TPatriciaTrie::ReadRecursive(std::basic_ifstream<char, std::char_traits<char> >*, TPatriciaTrieNode**, int*) [29] TPatriciaTrie::BitLen(char*) [11] TPatriciaTrieNode::~TPatriciaTrieNode()
+   [6] TPatriciaTrie::WriteRecursive(std::basic_ofstream<char, std::char_traits<char> >*, TPatriciaTrieNode*) [20] TPatriciaTrie::Delete(char*) [12] TPatriciaTrieNode::~TPatriciaTrieNode()
+   [3] TPatriciaTrie::DestructRecursive(TPatriciaTrieNode*) [14] TPatriciaTrie::Insert(char*, unsigned long long) [17] std::operator|(std::_Ios_Openmode, std::_Ios_Openmode)
