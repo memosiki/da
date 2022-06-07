@@ -12,7 +12,7 @@ def get_number():
 
 def get_data():
     size = random.randint(1, 64)
-    return ''.join(choice(ascii_letters) for i in range(size))
+    return ''.join(choice(ascii_letters) for _ in range(size))
     
 size = input()
 i = 0
